@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human Readable Project Reporting"
+  short_description: "Create reports people can understand quickly"
+  default_prompt: "Use $human-readable-project-reporting to turn complex project outputs and evidence into a concise human-readable report package."

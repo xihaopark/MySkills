@@ -1,0 +1,4 @@
+interface:
+  display_name: "Goal Driven Skill Iteration"
+  short_description: "Use Goal mode to iteratively improve skills"
+  default_prompt: "Use $goal-driven-skill-iteration to run a focused goal-mode loop that improves a project skill through evidence, tests, and retrospectives."
