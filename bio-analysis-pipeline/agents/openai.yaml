@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bio Analysis Pipeline"
+  short_description: "Reproduce and package biostat analysis pipelines"
+  default_prompt: "Use $bio-analysis-pipeline to plan and execute a reproducible biostat analysis pipeline from source scripts, data, outputs, and review evidence."
