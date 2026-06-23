@@ -108,6 +108,8 @@ Use excerpts for rewritten definitions, experimental settings, limitation paragr
 ## Table Rules
 
 - Use real data values.
+- Use judgment about which real values to show. Rebuttal tables are not experiment dumps; they should contain the rows needed to answer the current reviewer concern.
+- Do not add unattractive or noisy rows only to look balanced. If those rows weaken the main point and are not required by the reviewer, omit them and narrow the claim.
 - Use method/dataset/horizon/metric columns for forecasting and ML experiments.
 - Use `\toprule`, `\midrule`, and `\bottomrule` unless the manuscript has a different established style.
 - Keep result precision consistent with the paper.

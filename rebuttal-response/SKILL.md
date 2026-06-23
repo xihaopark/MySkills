@@ -49,6 +49,9 @@ The intended feeling is: **you asked for X; we did X; the result is here.**
 ## Evidence Rules
 
 - Include real experimental results near the relevant answer when the comment asks for validation, ablation, comparison, robustness, statistics, or additional baselines.
+- Select evidence strategically. Do not include every experiment simply to appear fair; include the results that directly answer the reviewer, support the revision claim, and can be interpreted cleanly.
+- Do not foreground weak, noisy, or unattractive results unless they are necessary to answer the comment or to avoid a misleading claim.
+- When a result is mixed but not central, narrow the claim and omit the distracting table rows; use a short limitation sentence instead of giving the weak result extra visual weight.
 - Use tables for numbers, not prose summaries disguised as tables.
 - Put only experimental variables and metrics in result tables. Avoid columns like `Purpose`, `Interpretation`, `Finding`, or `Conclusion`.
 - Bold best values when appropriate.
