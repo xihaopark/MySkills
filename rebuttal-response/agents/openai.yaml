@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rebuttal Response"
+  short_description: "Draft concise evidence-first reviewer replies"
+  default_prompt: "Use $rebuttal-response to revise a point-by-point reviewer response so each comment is answered with specific manuscript changes, experiments, and evidence."
