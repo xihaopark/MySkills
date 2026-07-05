@@ -1,12 +1,12 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Personal knowledge base for reusable agent-system design, workflow skills, and collaboration patterns.">
+        <meta name="description" content="面向中文读者的个人知识库，整理可复用的 agent system 设计、工作流技能和协作模式。">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>Design Philosophy - MySkills Knowledge Base</title>
+        <title>设计哲学 - MySkills 知识库</title>
       
     
     
@@ -48,8 +48,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans SC";--md-code-font:"IBM Plex Mono"}</style>
       
     
     
@@ -80,8 +80,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#notes-06-claude-science-design-philosophy" class="md-skip">
-          Skip to content
+        <a href="#06claude-science" class="md-skip">
+          跳转至
         </a>
       
     </div>
@@ -93,8 +93,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="MySkills Knowledge Base" class="md-header__button md-logo" aria-label="MySkills Knowledge Base" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="MySkills 知识库" class="md-header__button md-logo" aria-label="MySkills 知识库" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,13 +108,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            MySkills Knowledge Base
+            MySkills 知识库
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Design Philosophy
+              设计哲学
             
           </span>
         </div>
@@ -127,9 +127,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -137,9 +137,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
@@ -162,16 +162,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -184,7 +184,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -196,7 +196,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/xihaopark/MySkills" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/xihaopark/MySkills" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -217,7 +217,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -233,7 +233,7 @@
   
     
   
-  Home
+  首页
 
       </a>
     </li>
@@ -254,7 +254,27 @@
           
   
   
-  Agent Loop Systems
+  Agent Loop 系统
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../site-maintenance/translation-module/" class="md-tabs__link">
+          
+  
+  
+  站点维护
 
         </a>
       </li>
@@ -282,19 +302,19 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="MySkills Knowledge Base" class="md-nav__button md-logo" aria-label="MySkills Knowledge Base" data-md-component="logo">
+    <a href="../.." title="MySkills 知识库" class="md-nav__button md-logo" aria-label="MySkills 知识库" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    MySkills Knowledge Base
+    MySkills 知识库
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/xihaopark/MySkills" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/xihaopark/MySkills" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -321,7 +341,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    首页
   
 
     
@@ -369,7 +389,7 @@
   <span class="md-ellipsis">
     
   
-    Agent Loop Systems
+    Agent Loop 系统
   
 
     
@@ -385,7 +405,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Agent Loop Systems
+    Agent Loop 系统
   
 
           </label>
@@ -405,7 +425,7 @@
   <span class="md-ellipsis">
     
   
-    Overview
+    总览
   
 
     
@@ -433,7 +453,7 @@
   <span class="md-ellipsis">
     
   
-    Source Index
+    外部资料索引（Source Index）
   
 
     
@@ -461,7 +481,7 @@
   <span class="md-ellipsis">
     
   
-    Scientific Workflow Design Questions
+    科研工作流设计问题
   
 
     
@@ -555,7 +575,7 @@
   <span class="md-ellipsis">
     
   
-    Design Philosophy
+    设计哲学
   
 
     
@@ -573,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    Design Philosophy
+    设计哲学
   
 
     
@@ -585,7 +605,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -594,15 +614,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-frame" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Frame
+        核心框架
       
     </span>
   </a>
@@ -610,15 +630,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seven-transferable-principles" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seven Transferable Principles
+        七条可迁移原则
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Seven Transferable Principles">
+    <nav class="md-nav" aria-label="七条可迁移原则">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -633,10 +653,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-declarative-compute-declarative-workflow" class="md-nav__link">
+  <a href="#2-declarative-compute-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Declarative Compute / Declarative Workflow
+        2. 声明式计算 / 声明式工作流（Declarative Compute / Workflow）
       
     </span>
   </a>
@@ -704,10 +724,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tension-with-current-a-scientific-workflow-agent-state" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tension With Current A scientific workflow agent State
+        与当前状态的张力
       
     </span>
   </a>
@@ -715,10 +735,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#design-questions-added-by-this-source" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Design Questions Added by This Source
+        由此产生的设计问题
       
     </span>
   </a>
@@ -748,7 +768,7 @@
   <span class="md-ellipsis">
     
   
-    Full Reference ZH
+    长文参考
   
 
     
@@ -805,7 +825,7 @@
   <span class="md-ellipsis">
     
   
-    Foundations
+    核心主题
   
 
     
@@ -821,7 +841,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Foundations
+    核心主题
   
 
           </label>
@@ -841,7 +861,7 @@
   <span class="md-ellipsis">
     
   
-    Loop and Harness Architecture
+    循环与执行框架（Loop / Harness）
   
 
     
@@ -869,7 +889,7 @@
   <span class="md-ellipsis">
     
   
-    Human-in-the-Loop and Guardrails
+    人工介入与护栏（HITL / Guardrails）
   
 
     
@@ -897,7 +917,7 @@
   <span class="md-ellipsis">
     
   
-    Verification, Evals, and Observability
+    验证、评估与可观测性（Verification / Evals）
   
 
     
@@ -925,7 +945,7 @@
   <span class="md-ellipsis">
     
   
-    Memory, Learning, and Wiki
+    记忆、学习与 Wiki
   
 
     
@@ -953,7 +973,7 @@
   <span class="md-ellipsis">
     
   
-    Community Risks and Counterpoints
+    风险与反方观点
   
 
     
@@ -982,6 +1002,95 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    站点维护
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    站点维护
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site-maintenance/translation-module/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中文化维护模块
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -995,7 +1104,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
@@ -1004,15 +1113,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-frame" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Frame
+        核心框架
       
     </span>
   </a>
@@ -1020,15 +1129,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seven-transferable-principles" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seven Transferable Principles
+        七条可迁移原则
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Seven Transferable Principles">
+    <nav class="md-nav" aria-label="七条可迁移原则">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1043,10 +1152,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-declarative-compute-declarative-workflow" class="md-nav__link">
+  <a href="#2-declarative-compute-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Declarative Compute / Declarative Workflow
+        2. 声明式计算 / 声明式工作流（Declarative Compute / Workflow）
       
     </span>
   </a>
@@ -1114,10 +1223,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tension-with-current-a-scientific-workflow-agent-state" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tension With Current A scientific workflow agent State
+        与当前状态的张力
       
     </span>
   </a>
@@ -1125,10 +1234,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#design-questions-added-by-this-source" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Design Questions Added by This Source
+        由此产生的设计问题
       
     </span>
   </a>
@@ -1152,7 +1261,7 @@
 
 
   
-    <a href="https://github.com/xihaopark/MySkills/edit/main/docs/agent-loop-systems/Agent-Loop-Systems-Claude-Science-Design-Philosophy.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/xihaopark/MySkills/edit/main/docs/agent-loop-systems/Agent-Loop-Systems-Claude-Science-Design-Philosophy.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1160,144 +1269,144 @@
   
 
 
-<h1 id="notes-06-claude-science-design-philosophy">Notes 06: Claude Science Design Philosophy<a class="headerlink" href="#notes-06-claude-science-design-philosophy" title="Permanent link">&para;</a></h1>
-<p>Source: <code>../sources/claude-science-design-philosophy-zh.md</code></p>
-<p>This note distills the user-added Claude Science reading into design principles for scientific workflow agent. It does not claim Claude Science is the target product; it uses the reading as a reference architecture for scientific-agent behavior.</p>
-<h2 id="core-frame">Core Frame<a class="headerlink" href="#core-frame" title="Permanent link">&para;</a></h2>
-<p>The useful sentence from the source:</p>
+<h1 id="06claude-science">笔记 06：Claude Science 设计哲学<a class="headerlink" href="#06claude-science" title="Permanent link">&para;</a></h1>
+<p>来源：<code>Claude-Science-Full-Reference-ZH.md</code></p>
+<p>这篇笔记把用户补充的 Claude Science 长文阅读提炼成科研 workflow agent 的设计原则。它并不把 Claude Science 当成目标产品，而是把它作为科学 agent 行为的参考架构（reference architecture）。</p>
+<h2 id="_1">核心框架<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>原文中最有价值的一句话是：</p>
 <blockquote>
-<p>Treat the agent as a scientific instrument that must be calibrated, not as a subordinate that must be commanded.</p>
+<p>把 agent 当成一个需要被“校准”的科学仪器，而不是一个需要被“命令”的下属。</p>
 </blockquote>
-<p>For a scientific workflow agent, this means we should not solve Core3-6 by adding stricter prompt commands. We should calibrate the loop:</p>
+<p>对科研 workflow agent 来说，这意味着 Core3-6 不能靠更严格的 prompt 命令来解决。我们要校准的是整个 loop：</p>
 <ul>
-<li>what evidence the agent sees;</li>
-<li>what artifacts it must produce;</li>
-<li>what boundaries it cannot cross;</li>
-<li>what user decisions are required;</li>
-<li>what evals show the loop is improving.</li>
+<li>agent 能看到什么证据；</li>
+<li>它必须产出什么 artifacts；</li>
+<li>它不能跨越哪些边界；</li>
+<li>哪些用户决策是必需的；</li>
+<li>哪些 evals 能证明循环在变好。</li>
 </ul>
-<h2 id="seven-transferable-principles">Seven Transferable Principles<a class="headerlink" href="#seven-transferable-principles" title="Permanent link">&para;</a></h2>
+<h2 id="_2">七条可迁移原则<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="1-artifact-first">1. Artifact-First<a class="headerlink" href="#1-artifact-first" title="Permanent link">&para;</a></h3>
-<p>Claude Science treats artifacts as the main product and chat as the connective layer.</p>
-<p>Reusable mapping:</p>
+<p>Claude Science 把 artifacts 当成主要产品，chat 只是连接层。</p>
+<p>可复用映射：</p>
 <ul>
-<li><code>&lt;run evidence root&gt;</code> should remain the evidence root.</li>
-<li>Core3-6 should produce user-facing attention packets that link to artifacts.</li>
-<li>Main conversation should summarize and navigate artifacts, not become the artifact.</li>
+<li><code>&lt;run evidence root&gt;</code> 应继续作为 evidence root。</li>
+<li>Core3-6 应产出用户可读的 attention packets，并链接到 artifacts。</li>
+<li>Main conversation 应总结和导航 artifacts，而不是自己成为 artifact。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>Every Core3-6 card should point to concrete CSV/PNG/manifest/review files.</li>
-<li>"Selected result" should be an artifact-backed context object, not copied chat text.</li>
+<li>每张 Core3-6 card 都应指向具体 CSV / PNG / manifest / review files。</li>
+<li>“Selected result” 应是 artifact-backed context object，而不是复制出来的聊天文本。</li>
 </ul>
-<h3 id="2-declarative-compute-declarative-workflow">2. Declarative Compute / Declarative Workflow<a class="headerlink" href="#2-declarative-compute-declarative-workflow" title="Permanent link">&para;</a></h3>
-<p>Claude Science uses declarative environment specs to separate what a job needs from how each backend runs it.</p>
-<p>Reusable mapping:</p>
+<h3 id="2-declarative-compute-workflow">2. 声明式计算 / 声明式工作流（Declarative Compute / Workflow）<a class="headerlink" href="#2-declarative-compute-workflow" title="Permanent link">&para;</a></h3>
+<p>Claude Science 使用声明式环境规格，把 job 需要什么与各后端如何运行分离。</p>
+<p>可复用映射：</p>
 <ul>
-<li>ER workflow specs should describe clinical/statistical intent and source mappings.</li>
-<li>Runner code should execute against those specs without hardcoded study logic.</li>
-<li>Core3-6 gates should mutate explicit spec/decision state, not hidden prompt context.</li>
+<li>ER workflow specs 应描述临床/统计意图和 source mappings。</li>
+<li>Runner code 应依据 specs 执行，而不是写死 study logic。</li>
+<li>Core3-6 gates 应修改显式 spec / decision state，而不是隐藏 prompt context。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>Gate decisions should be represented as typed state that downstream runners consume.</li>
-<li>Future Core3-6 improvements should prefer spec extensions over ad hoc prompts.</li>
+<li>Gate decisions 应成为下游 runner 会消费的 typed state。</li>
+<li>未来 Core3-6 改进应优先扩展 specs，而不是添加 ad hoc prompts。</li>
 </ul>
 <h3 id="3-provenance-by-construction">3. Provenance by Construction<a class="headerlink" href="#3-provenance-by-construction" title="Permanent link">&para;</a></h3>
-<p>The source emphasizes execution logs, artifact versions, dependency DAGs, checksums, and environment snapshots.</p>
-<p>Reusable mapping:</p>
+<p>原文强调 execution logs、artifact versions、dependency DAGs、checksums 和 environment snapshots。</p>
+<p>可复用映射：</p>
 <ul>
-<li>We already have artifact lanes, pipeline status, data auditor, gate records, and <code>run evidence roots</code>.</li>
-<li>The gap is user-facing provenance: the user should see enough lineage to trust what happened without reading raw debug.</li>
+<li>我们已经有 artifact lanes、pipeline status、data auditor、gate records 和 <code>run evidence roots</code>。</li>
+<li>当前缺口是用户可见 provenance：用户应能在不读 raw debug 的情况下理解 lineage。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>Core3-6 should add compact lineage summaries:</li>
-<li>source files used;</li>
-<li>upstream artifacts consumed;</li>
-<li>outputs written;</li>
-<li>gates/audits affecting result;</li>
-<li>unresolved dependencies.</li>
+<li>Core3-6 应增加紧凑 lineage summaries：</li>
+<li>使用了哪些 source files；</li>
+<li>消费了哪些 upstream artifacts；</li>
+<li>写出了哪些 outputs；</li>
+<li>哪些 gates / audits 影响了结果；</li>
+<li>仍有哪些 unresolved dependencies。</li>
 </ul>
 <h3 id="4-grounding-over-generation">4. Grounding Over Generation<a class="headerlink" href="#4-grounding-over-generation" title="Permanent link">&para;</a></h3>
-<p>Claude Science's rule is compute/query authoritative sources rather than inventing answers.</p>
-<p>Reusable mapping:</p>
+<p>Claude Science 的原则是查询/计算权威来源，而不是从模型记忆中编答案。</p>
+<p>可复用映射：</p>
 <ul>
-<li>Core3-6 cannot infer clinical/statistical decisions from model memory.</li>
-<li>It should use source data, specs, prior artifacts, reviewed wiki, and explicit gates.</li>
+<li>Core3-6 不能从模型记忆推断临床/统计决策。</li>
+<li>它应使用 source data、specs、prior artifacts、reviewed wiki 和 explicit gates。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>A Core3 exposure metric or Core5 interpretation must cite the exact spec/gate/source artifact that supports it.</li>
-<li>If a source is unavailable, write a blocked manifest rather than creating synthetic placeholder claims.</li>
+<li>Core3 exposure metric 或 Core5 interpretation 必须引用支持它的 spec / gate / source artifact。</li>
+<li>如果 source 不可用，应写 blocked manifest，而不是生成 synthetic placeholder claims。</li>
 </ul>
 <h3 id="5-purpose-shaped-agents">5. Purpose-Shaped Agents<a class="headerlink" href="#5-purpose-shaped-agents" title="Permanent link">&para;</a></h3>
-<p>The source highlights agents shaped by removing irrelevant tools and capabilities.</p>
-<p>Reusable mapping:</p>
+<p>原文强调通过移除无关工具和能力来塑造 agent。</p>
+<p>可复用映射：</p>
 <ul>
-<li>Do not make one all-powerful ER agent.</li>
-<li>Use purpose-shaped roles:</li>
-<li>Runner: execute deterministic core.</li>
-<li>Auditor: inspect artifact/source/gate quality.</li>
-<li>Explainer: produce human decision packet.</li>
-<li>Wiki Curator: propose learning candidates, never auto-approve.</li>
+<li>不要做一个全能 ER agent。</li>
+<li>使用 purpose-shaped roles：</li>
+<li>Runner：执行确定性 core。</li>
+<li>Auditor：检查 artifact / source / gate quality。</li>
+<li>Explainer：生成 human decision packet。</li>
+<li>Wiki Curator：提出 learning candidates，但永不自动 approve。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>Core3-6 should not use group chat as the default.</li>
-<li>Review/audit roles should have constrained authority and clear output schemas.</li>
+<li>Core3-6 不应默认使用 group chat。</li>
+<li>Review / audit roles 应有受限权限和清晰 output schemas。</li>
 </ul>
 <h3 id="6-progressive-disclosure">6. Progressive Disclosure<a class="headerlink" href="#6-progressive-disclosure" title="Permanent link">&para;</a></h3>
-<p>Claude Science keeps many skills available without loading them all into context.</p>
-<p>Reusable mapping:</p>
+<p>Claude Science 让许多 skills 可用，但不会一次性把它们全部塞进上下文。</p>
+<p>可复用映射：</p>
 <ul>
-<li>Reviewed wiki should be retrieved selectively into a bounded attention packet.</li>
-<li>Skills should stay stable procedure; wiki should provide reviewed project knowledge.</li>
+<li>Reviewed wiki 应选择性检索成有边界的 attention packet。</li>
+<li>Skills 保存稳定 procedure；Wiki 提供 reviewed project knowledge。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>Wiki retrieval logs should show why a page was retrieved.</li>
-<li>The agent should only receive distilled wiki context needed for the current core.</li>
+<li>Wiki retrieval logs 应说明为什么检索某页。</li>
+<li>Agent 只应接收当前 core 所需的 distilled wiki context。</li>
 </ul>
 <h3 id="7-measured-self-extension">7. Measured Self-Extension<a class="headerlink" href="#7-measured-self-extension" title="Permanent link">&para;</a></h3>
-<p>The source's strongest self-evolution lesson is not "auto-write new skills." It is measured improvement:</p>
+<p>原文关于自进化最强的教训不是“自动写新 skills”，而是可测量的改进：</p>
 <ul>
-<li>generate candidate;</li>
-<li>test it;</li>
-<li>compare results;</li>
-<li>review regression risk;</li>
-<li>only then publish.</li>
+<li>生成候选；</li>
+<li>测试它；</li>
+<li>对比结果；</li>
+<li>review regression risk；</li>
+<li>然后才发布。</li>
 </ul>
-<p>Reusable mapping:</p>
+<p>可复用映射：</p>
 <ul>
-<li>Runtime can write learning candidates.</li>
-<li>Humans approve wiki updates.</li>
-<li>Skills/registry/runner updates require explicit development workflow and tests.</li>
+<li>Runtime 可以写 learning candidates。</li>
+<li>人类批准 wiki updates。</li>
+<li>Skills / registry / runner updates 需要显式开发流程和测试。</li>
 </ul>
-<p>Design implication:</p>
+<p>设计含义：</p>
 <ul>
-<li>Wiki learning and eval learning should be separate:</li>
-<li>wiki records reviewed knowledge;</li>
-<li>eval cases record behavior we must preserve.</li>
-<li>A learning candidate should be promoted only with source refs and review status.</li>
+<li>Wiki learning 与 eval learning 应分开：</li>
+<li>Wiki 记录 reviewed knowledge；</li>
+<li>Eval cases 记录必须保持的行为。</li>
+<li>Learning candidate 只有带 source refs 和 review status 才能提升。</li>
 </ul>
-<h2 id="tension-with-current-a-scientific-workflow-agent-state">Tension With Current A scientific workflow agent State<a class="headerlink" href="#tension-with-current-a-scientific-workflow-agent-state" title="Permanent link">&para;</a></h2>
-<p>Current Core3-6 happy path is mostly automode. The Claude Science reading pushes us toward:</p>
+<h2 id="_3">与当前状态的张力<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>当前 Core3-6 happy path 仍偏 automode。Claude Science 阅读推动我们走向：</p>
 <ul>
-<li>less silent automation;</li>
-<li>more artifact-backed user visibility;</li>
-<li>clearer decision boundaries;</li>
-<li>stronger provenance summaries;</li>
-<li>reviewed memory that affects execution;</li>
-<li>eval-backed self-evolution rather than unchecked runtime learning.</li>
+<li>更少静默自动化；</li>
+<li>更多 artifact-backed user visibility；</li>
+<li>更清晰的 decision boundaries；</li>
+<li>更强的 provenance summaries；</li>
+<li>真正影响执行的 reviewed memory；</li>
+<li>由 eval 支撑的 self-evolution，而不是 runtime unchecked learning。</li>
 </ul>
-<h2 id="design-questions-added-by-this-source">Design Questions Added by This Source<a class="headerlink" href="#design-questions-added-by-this-source" title="Permanent link">&para;</a></h2>
+<h2 id="_4">由此产生的设计问题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Should every Core3-6 output be wrapped as an artifact card with provenance and decision boundary?</li>
-<li>Should Core3-6 runner output include a dependency DAG or simplified lineage table?</li>
-<li>Should wiki retrieval be treated as a formal source input and appear in Core6 review package?</li>
-<li>Should "agent learning" always produce two artifacts: a wiki candidate and an eval candidate?</li>
-<li>Should each role's allowed tools be documented as part of the 1.0 stability plan?</li>
+<li>每个 Core3-6 输出是否都应包装为带 provenance 和 decision boundary 的 artifact card？</li>
+<li>Core3-6 runner 输出是否应包含 dependency DAG 或简化 lineage table？</li>
+<li>Wiki retrieval 是否应作为正式 source input 出现在 Core6 review package？</li>
+<li>“Agent learning” 是否总是产出两个 artifacts：wiki candidate 和 eval candidate？</li>
+<li>每个 role 的 allowed tools 是否应作为 1.0 稳定性计划的一部分记录？</li>
 </ul>
 
 
@@ -1322,7 +1431,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  回到页面顶部
 </button>
         
       </main>
@@ -1331,33 +1440,33 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../Scientific-Workflow-Agent-Design-Questions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scientific Workflow Design Questions">
+          <a href="../Scientific-Workflow-Agent-Design-Questions/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 科研工作流设计问题">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Previous
+                上一页
               </span>
               <div class="md-ellipsis">
-                Scientific Workflow Design Questions
+                科研工作流设计问题
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Claude-Science-Full-Reference-ZH/" class="md-footer__link md-footer__link--next" aria-label="Next: Full Reference ZH">
+          <a href="../Claude-Science-Full-Reference-ZH/" class="md-footer__link md-footer__link--next" aria-label="下一页: 长文参考">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Next
+                下一页
               </span>
               <div class="md-ellipsis">
-                Full Reference ZH
+                长文参考
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1394,7 +1503,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "search.highlight", "search.suggest", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>

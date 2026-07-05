@@ -51,16 +51,18 @@ body {
 }
 
 .md-typeset {
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   letter-spacing: 0;
+  line-height: 1.82;
 }
 
 .md-typeset h1 {
   color: var(--md-default-fg-color);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.35rem;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+  font-size: 2.15rem;
   font-weight: 650;
   letter-spacing: 0;
-  line-height: 1.08;
+  line-height: 1.18;
   margin-bottom: 0.75rem;
 }
 
@@ -68,19 +70,21 @@ body {
   color: var(--md-default-fg-color);
   font-weight: 760;
   letter-spacing: 0;
+  line-height: 1.35;
   margin-top: 2.15rem;
 }
 
 .md-typeset h3 {
   font-weight: 720;
   letter-spacing: 0;
+  line-height: 1.45;
 }
 
 .md-typeset > p:first-of-type {
   color: var(--md-default-fg-color--light);
-  font-size: 1.02rem;
-  line-height: 1.65;
-  max-width: 42rem;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  max-width: 43rem;
 }
 
 .md-nav__title,
@@ -93,28 +97,39 @@ body {
   text-underline-offset: 0.16em;
 }
 
-.md-typeset .grid.cards > ul {
+.kb-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
-  gap: 0.95rem;
-  margin-top: 1.25rem;
-  padding: 0;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(15.2rem, 1fr));
+  margin: 1.35rem 0 1.8rem;
 }
 
-.md-typeset .grid.cards > ul > li {
+.kb-card {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(255, 255, 255, 0.22)),
     var(--md-default-bg-color);
   border: 1px solid rgba(117, 97, 76, 0.2);
   border-radius: 0.45rem;
   box-shadow: 0 0.35rem 1.6rem rgba(32, 37, 43, 0.055);
-  list-style: none;
+  color: var(--md-default-fg-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
   margin: 0;
-  padding: 1rem;
+  min-height: 7.6rem;
+  padding: 1rem 1.05rem;
+  text-decoration: none;
   transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
 }
 
-[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+.kb-card:hover {
+  border-color: rgba(173, 91, 60, 0.5);
+  box-shadow: 0 0.55rem 1.9rem rgba(32, 37, 43, 0.09);
+  color: var(--md-default-fg-color);
+  transform: translateY(-1px);
+}
+
+[data-md-color-scheme="slate"] .kb-card {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012)),
     #191c1f;
@@ -122,27 +137,27 @@ body {
   box-shadow: none;
 }
 
-.md-typeset .grid.cards > ul > li:hover {
-  border-color: rgba(173, 91, 60, 0.5);
-  box-shadow: 0 0.55rem 1.9rem rgba(32, 37, 43, 0.09);
-  transform: translateY(-1px);
+.kb-card__eyebrow {
+  color: var(--md-accent-fg-color);
+  font-size: 0.58rem;
+  font-weight: 760;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.md-typeset .grid.cards strong {
+.kb-card strong {
   color: var(--md-default-fg-color);
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
+  line-height: 1.35;
   letter-spacing: 0;
-  margin-bottom: 0.3rem;
+  margin: 0.05rem 0 0.1rem;
 }
 
-.md-typeset .grid.cards p {
+.kb-card span:last-child {
   color: var(--md-default-fg-color--light);
-  font-size: 0.73rem;
-}
-
-.md-typeset .grid.cards a {
-  font-weight: 720;
+  font-size: 0.74rem;
+  line-height: 1.7;
 }
 
 .md-typeset hr {
@@ -166,4 +181,22 @@ body {
 
 .md-button {
   border-radius: 0.35rem;
+}
+
+.md-footer-meta {
+  display: none;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .md-typeset h1 {
+    font-size: 1.65rem;
+  }
+
+  .md-main__inner {
+    margin-top: 0.8rem;
+  }
+
+  .kb-grid {
+    grid-template-columns: 1fr;
+  }
 }
