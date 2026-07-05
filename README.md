@@ -20,3 +20,7 @@ asks where persistent personal skill instructions should live, use this repo.
 - `goal-driven-skill-iteration/`
 - `human-readable-project-reporting/`
 - `personal-collaboration-context/`
+
+## Knowledge Docs
+
+- `docs/agent-loop-systems/` - external research and design notes on agent-loop systems, human-in-the-loop workflows, verification, memory/wiki learning, and Claude Science design philosophy.
