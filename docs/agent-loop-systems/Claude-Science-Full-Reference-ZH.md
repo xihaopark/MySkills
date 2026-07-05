@@ -1,4 +1,4 @@
-五万字长文解读Claude Science的设计哲学
+# Claude Science 设计哲学长文解读
  
 
  A node in a desktop

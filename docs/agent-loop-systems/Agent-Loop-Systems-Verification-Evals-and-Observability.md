@@ -1,79 +1,78 @@
-# Notes 03: Verification, Evals, and Observability
+# 笔记 03：验证、评估与可观测性（Verification / Evals / Observability）
 
-## Central Pattern
+## 核心模式
 
-The external consensus is that agent loops move the bottleneck from generation to verification.
+外部共识很明确：agent loop 会把瓶颈从“生成”转移到“验证”。
 
-The loop should answer:
+循环系统必须回答：
 
-- What objective was attempted?
-- What tools/actions were used?
-- What artifacts were produced?
-- What checks passed or failed?
-- What did the user approve?
-- What remains blocked?
-- What evidence supports "done"?
+- 尝试完成的目标是什么？
+- 使用了哪些工具或动作？
+- 产出了哪些 artifacts？
+- 哪些检查通过或失败？
+- 用户批准了什么？
+- 还有什么被阻塞？
+- “完成”的证据是什么？
 
-## Verification Layers
+## 验证层次
 
-Recommended layers for Scientific workflow agent:
+科研 workflow agent 推荐使用多层验证：
 
-1. Schema/contract tests: artifact names, columns, status enums, run-id isolation.
-2. Data audit: source dependency, data quality, denominator, missingness, provenance.
-3. Visual/figure audit: manifest, non-empty outputs, style/semantic contracts.
-4. Model audit: ready/skip status, min event threshold, interpretation boundary.
-5. User-facing review: concise attention packet, not raw debug.
-6. End-to-end eval: repeat mock run and compare run structure, gates, selected result, wiki retrieval.
+1. Schema / contract tests：artifact 名称、字段、状态枚举、run-id 隔离。
+2. Data audit：source dependency、data quality、denominator、missingness、provenance。
+3. Visual / figure audit：manifest、非空输出、style / semantic contract。
+4. Model audit：ready / skip status、minimum event threshold、interpretation boundary。
+5. User-facing review：简洁 attention packet，而不是 raw debug。
+6. End-to-end eval：重复 mock run，对比 run structure、gates、selected result、wiki retrieval。
 
 ## Harness-First Verification
 
-Datadog's harness-first framing is useful:
+Datadog 的 harness-first 观点很有价值：
 
-- The harness should verify quickly and automatically.
-- Human review should focus on high-value judgment, not scanning every raw event.
-- Telemetry/observability closes the loop when test harness assumptions diverge from reality.
+- Harness 应快速、自动地完成验证。
+- 人工 review 应聚焦高价值判断，而不是扫描所有 raw event。
+- 当 test harness 假设与真实生产行为分叉时，telemetry / observability 负责闭环。
 
-Reusable mapping:
+可复用映射：
 
-- Core3-6 need machine-verifiable step reports.
-- The main conversation should hide raw/system/tool debug by default.
-- Raw events, tool invocations, snapshots, and artifacts must remain traceable.
+- Core3-6 需要机器可验证的 step reports。
+- Main conversation 默认隐藏 raw/system/tool debug。
+- Raw events、tool invocations、snapshots 和 artifacts 必须可追溯。
 
-## Evals as Product Memory
+## Evals 作为产品记忆
 
-Anthropic and LangChain both frame evals as lifecycle assets:
+Anthropic 和 LangChain 都把 evals 视为生命周期资产：
 
-- Start with a small set of realistic use cases.
-- Add interesting failures from manual testing.
-- Let human reviewers annotate traces/evals.
-- Use eval deltas before changing prompts/tools/harness.
+- 从少量真实 use cases 开始。
+- 把 manual testing 中有价值的失败加入 eval。
+- 让 human reviewer 标注 traces / evals。
+- 在改 prompts / tools / harness 之前看 eval delta。
 
-Reusable mapping:
+可复用映射：
 
-- Customer feedback items should produce acceptance/eval cases.
-- Core3-6 demo failures should be converted into tests or checklist rows.
-- Wiki candidates and eval candidates are related but separate:
-  - wiki stores reviewed project knowledge;
-  - evals store behavior that must remain true.
+- 客户反馈应转化为 acceptance / eval cases。
+- Core3-6 demo 失败应转成 tests 或 checklist rows。
+- Wiki candidates 和 eval candidates 相关但不相同：
+  - wiki 存 reviewed project knowledge；
+  - evals 存必须持续成立的行为。
 
-## Observability Requirements
+## 可观测性要求
 
-For each formal run, preserve:
+每次正式 run 应保留：
 
-- run id and display name separately;
-- cwd / project root / plugin root;
-- core start/end status;
-- model/tool/handoff events, if available;
-- file artifacts and manifests;
-- gate request/decision;
-- selected result context additions;
-- wiki retrieval log;
-- learning candidate log;
-- audit/action item output.
+- run id 和 display name，并保持二者分离；
+- cwd / project root / plugin root；
+- core start/end status；
+- model / tool / handoff events，如果可用；
+- file artifacts 和 manifests；
+- gate request / decision；
+- selected result context additions；
+- wiki retrieval log；
+- learning candidate log；
+- audit / action item output。
 
-## Open Design Questions
+## 开放问题
 
-- Should Core3-6 each emit a compact `attention_packet.md` plus `attention_packet.json`?
-- Should "done" for each core be a predicate over artifacts/gates/audits rather than a script exit code?
-- Should Core6 aggregate not only review gates but also "user visible unresolved decisions"?
-
+- Core3-6 是否都应输出紧凑的 `attention_packet.md` 和 `attention_packet.json`？
+- 每个 core 的 “done” 是否应是 artifacts / gates / audits 上的 predicate，而不是脚本 exit code？
+- Core6 是否不仅聚合 review gates，也聚合“用户可见的未解决决策”？

@@ -1,19 +1,18 @@
 # MySkills Wiki
 
-- [Home](Home)
-- [Source Index](Agent-Loop-Systems-Source-Index)
-- [Design Questions](Scientific-Workflow-Agent-Design-Questions)
+- [首页](Home)
+- [外部资料索引](Agent-Loop-Systems-Source-Index)
+- [设计问题](Scientific-Workflow-Agent-Design-Questions)
 
-## Agent Loop Systems
+## Agent Loop 系统
 
-- [Loop and Harness](Agent-Loop-Systems-Loop-and-Harness-Architecture)
-- [HITL and Guardrails](Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails)
-- [Verification and Evals](Agent-Loop-Systems-Verification-Evals-and-Observability)
-- [Memory and Wiki](Agent-Loop-Systems-Memory-Learning-and-Wiki)
-- [Risks and Counterpoints](Agent-Loop-Systems-Community-Risks-and-Counterpoints)
+- [循环与 Harness](Agent-Loop-Systems-Loop-and-Harness-Architecture)
+- [HITL 与 Guardrails](Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails)
+- [Verification 与 Evals](Agent-Loop-Systems-Verification-Evals-and-Observability)
+- [Memory 与 Wiki](Agent-Loop-Systems-Memory-Learning-and-Wiki)
+- [风险与反方观点](Agent-Loop-Systems-Community-Risks-and-Counterpoints)
 - [Claude Science](Agent-Loop-Systems-Claude-Science-Design-Philosophy)
 
-## References
+## 参考
 
-- [Claude Science Full ZH](Claude-Science-Full-Reference-ZH)
-
+- [Claude Science 长文](Claude-Science-Full-Reference-ZH)

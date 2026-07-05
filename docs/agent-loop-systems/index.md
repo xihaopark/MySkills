@@ -1,49 +1,49 @@
-# Agent Loop Systems
+# Agent Loop 系统
 
-This section collects reusable research and design notes for scientific and evidence-heavy agent workflows.
+本节整理面向科研、证据链和高可靠工作流的 agent system 研究与设计笔记。这里的重点不是“让 agent 更自治”，而是设计一个清晰、可验证、可介入、可学习的运行循环。
 
-!!! tip "Recommended reading path"
-    Start with the source index if you want evidence. Start with the design questions if you are shaping a real agent system.
+!!! tip "建议阅读路径"
+    如果想看资料来源，先读外部资料索引（Source Index）。如果正在设计真实系统，先读科研工作流设计问题。
 
-<div class="grid cards" markdown>
+<section class="kb-grid" markdown>
 
-- **Source Index**
+<a class="kb-card" href="Agent-Loop-Systems-Source-Index/">
+  <span class="kb-card__eyebrow">资料索引 Source Index</span>
+  <strong>外部资料索引</strong>
+  <span>按循环架构、护栏、评估、记忆和 Wiki 实践整理外部资料。</span>
+</a>
 
-  External references grouped by agent loop architecture, guardrails, evals, memory, and wiki practice.
+<a class="kb-card" href="Scientific-Workflow-Agent-Design-Questions/">
+  <span class="kb-card__eyebrow">设计问题 Design Questions</span>
+  <strong>科研工作流设计问题</strong>
+  <span>用于设计具备清晰人工介入点的科研 workflow agent。</span>
+</a>
 
-  [Open](Agent-Loop-Systems-Source-Index.md)
+<a class="kb-card" href="Agent-Loop-Systems-Claude-Science-Design-Philosophy/">
+  <span class="kb-card__eyebrow">Claude Science</span>
+  <strong>设计哲学</strong>
+  <span>从 artifact-first、provenance-aware 的科研 agent 环境中提炼原则。</span>
+</a>
 
-- **Design Questions**
+<a class="kb-card" href="Agent-Loop-Systems-Memory-Learning-and-Wiki/">
+  <span class="kb-card__eyebrow">记忆 Memory</span>
+  <strong>记忆、学习与 Wiki</strong>
+  <span>让经人工审核的 Wiki 真正影响执行，而不是只做缓存。</span>
+</a>
 
-  Practical questions for designing a scientific workflow agent with clear human intervention points.
+</section>
 
-  [Open](Scientific-Workflow-Agent-Design-Questions.md)
+## 先读这些
 
-- **Claude Science Design Philosophy**
+- [外部资料索引（Source Index）](Agent-Loop-Systems-Source-Index.md)
+- [科研工作流 Agent 设计问题](Scientific-Workflow-Agent-Design-Questions.md)
+- [Claude Science 设计哲学](Agent-Loop-Systems-Claude-Science-Design-Philosophy.md)
+- [Claude Science 长文参考](Claude-Science-Full-Reference-ZH.md)
 
-  A distilled view of Claude Science as an artifact-first, provenance-aware scientific agent environment.
+## 主题笔记
 
-  [Open](Agent-Loop-Systems-Claude-Science-Design-Philosophy.md)
-
-- **Memory, Learning, and Wiki**
-
-  Patterns for reviewed memory and wiki-based agent learning that can affect execution without becoming uncontrolled self-modification.
-
-  [Open](Agent-Loop-Systems-Memory-Learning-and-Wiki.md)
-
-</div>
-
-## Start Here
-
-- [Source Index](Agent-Loop-Systems-Source-Index.md)
-- [Scientific Workflow Agent Design Questions](Scientific-Workflow-Agent-Design-Questions.md)
-- [Claude Science Design Philosophy](Agent-Loop-Systems-Claude-Science-Design-Philosophy.md)
-- [Claude Science Full Reference ZH](Claude-Science-Full-Reference-ZH.md)
-
-## Topic Notes
-
-- [Loop and Harness Architecture](Agent-Loop-Systems-Loop-and-Harness-Architecture.md)
-- [Human-in-the-Loop and Guardrails](Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails.md)
-- [Verification, Evals, and Observability](Agent-Loop-Systems-Verification-Evals-and-Observability.md)
-- [Memory, Learning, and Wiki](Agent-Loop-Systems-Memory-Learning-and-Wiki.md)
-- [Community Risks and Counterpoints](Agent-Loop-Systems-Community-Risks-and-Counterpoints.md)
+- [循环与执行框架（Loop / Harness）](Agent-Loop-Systems-Loop-and-Harness-Architecture.md)
+- [人工介入与护栏（HITL / Guardrails）](Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails.md)
+- [验证、评估与可观测性（Verification / Evals / Observability）](Agent-Loop-Systems-Verification-Evals-and-Observability.md)
+- [记忆、学习与 Wiki](Agent-Loop-Systems-Memory-Learning-and-Wiki.md)
+- [社区风险与反方观点](Agent-Loop-Systems-Community-Risks-and-Counterpoints.md)

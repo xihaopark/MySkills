@@ -1,27 +1,26 @@
 # MySkills Wiki
 
-This wiki is XiHao Park's long-term personal knowledge base for reusable agent-system design, workflow skills, and collaboration patterns.
+这是 XiHao Park 长期维护的个人知识库，用于整理可复用的 agent system 设计、工作流技能和协作模式。
 
-Current section: agent loop systems for scientific and evidence-heavy workflows.
+当前章节：面向科研与证据密集型工作流的 Agent Loop 系统。
 
-## Start Here
+## 先读这些
 
-- [Agent Loop Systems Source Index](Agent-Loop-Systems-Source-Index)
-- [Scientific Workflow Agent Design Questions](Scientific-Workflow-Agent-Design-Questions)
-- [Claude Science Design Philosophy](Agent-Loop-Systems-Claude-Science-Design-Philosophy)
-- [Claude Science Full Reference ZH](Claude-Science-Full-Reference-ZH)
+- [外部资料索引（Source Index）](Agent-Loop-Systems-Source-Index)
+- [科研 Workflow Agent 设计问题](Scientific-Workflow-Agent-Design-Questions)
+- [Claude Science 设计哲学](Agent-Loop-Systems-Claude-Science-Design-Philosophy)
+- [Claude Science 长文参考](Claude-Science-Full-Reference-ZH)
 
-## Topic Notes
+## 主题笔记
 
-- [Loop and Harness Architecture](Agent-Loop-Systems-Loop-and-Harness-Architecture)
-- [Human-in-the-Loop and Guardrails](Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails)
-- [Verification, Evals, and Observability](Agent-Loop-Systems-Verification-Evals-and-Observability)
-- [Memory, Learning, and Wiki](Agent-Loop-Systems-Memory-Learning-and-Wiki)
-- [Community Risks and Counterpoints](Agent-Loop-Systems-Community-Risks-and-Counterpoints)
+- [循环与执行框架（Loop / Harness）](Agent-Loop-Systems-Loop-and-Harness-Architecture)
+- [人工介入与护栏（HITL / Guardrails）](Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails)
+- [验证、评估与可观测性（Verification / Evals）](Agent-Loop-Systems-Verification-Evals-and-Observability)
+- [记忆、学习与 Wiki](Agent-Loop-Systems-Memory-Learning-and-Wiki)
+- [社区风险与反方观点](Agent-Loop-Systems-Community-Risks-and-Counterpoints)
 
-## Working Premise
+## 工作前提
 
-The useful shift is not "make the agent more autonomous." It is to design the loop that decides what the agent sees, what it may do, how it gets ground truth, when it pauses for the user, how it verifies work, and what reviewed memory becomes available next time.
+真正有价值的转变不是“让 agent 更自治”，而是设计一个循环：决定 agent 能看到什么、能做什么、如何获得 ground truth、何时停下来问用户、如何验证工作，以及哪些 reviewed memory 能在下一次运行中被检索。
 
-For scientific workflow agents, this points toward deterministic runners plus explicit human decision cards, review/audit loops, and reviewed wiki memory that can be retrieved at execution time.
-
+对于科研 workflow agent，这指向确定性 runner、明确的人类 decision cards、review / audit loops，以及会在执行时被检索的 reviewed wiki memory。

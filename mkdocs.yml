@@ -1,5 +1,5 @@
-site_name: MySkills Knowledge Base
-site_description: Personal knowledge base for reusable agent-system design, workflow skills, and collaboration patterns.
+site_name: MySkills 知识库
+site_description: 面向中文读者的个人知识库，整理可复用的 agent system 设计、工作流技能和协作模式。
 site_url: https://xihaopark.github.io/MySkills/
 repo_url: https://github.com/xihaopark/MySkills
 repo_name: xihaopark/MySkills
@@ -7,9 +7,9 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  language: en
+  language: zh
   font:
-    text: IBM Plex Sans
+    text: Noto Sans SC
     code: IBM Plex Mono
   features:
     - navigation.tabs
@@ -27,13 +27,13 @@ theme:
       accent: deep orange
       toggle:
         icon: material/weather-night
-        name: Switch to dark mode
+        name: 切换到深色模式
     - scheme: slate
       primary: black
       accent: deep orange
       toggle:
         icon: material/weather-sunny
-        name: Switch to light mode
+        name: 切换到浅色模式
 
 markdown_extensions:
   - admonition
@@ -57,17 +57,19 @@ extra_css:
   - assets/stylesheets/extra.css
 
 nav:
-  - Home: index.md
-  - Agent Loop Systems:
-      - Overview: agent-loop-systems/index.md
-      - Source Index: agent-loop-systems/Agent-Loop-Systems-Source-Index.md
-      - Scientific Workflow Design Questions: agent-loop-systems/Scientific-Workflow-Agent-Design-Questions.md
+  - 首页: index.md
+  - Agent Loop 系统:
+      - 总览: agent-loop-systems/index.md
+      - 外部资料索引（Source Index）: agent-loop-systems/Agent-Loop-Systems-Source-Index.md
+      - 科研工作流设计问题: agent-loop-systems/Scientific-Workflow-Agent-Design-Questions.md
       - Claude Science:
-          - Design Philosophy: agent-loop-systems/Agent-Loop-Systems-Claude-Science-Design-Philosophy.md
-          - Full Reference ZH: agent-loop-systems/Claude-Science-Full-Reference-ZH.md
-      - Foundations:
-          - Loop and Harness Architecture: agent-loop-systems/Agent-Loop-Systems-Loop-and-Harness-Architecture.md
-          - Human-in-the-Loop and Guardrails: agent-loop-systems/Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails.md
-          - Verification, Evals, and Observability: agent-loop-systems/Agent-Loop-Systems-Verification-Evals-and-Observability.md
-          - Memory, Learning, and Wiki: agent-loop-systems/Agent-Loop-Systems-Memory-Learning-and-Wiki.md
-          - Community Risks and Counterpoints: agent-loop-systems/Agent-Loop-Systems-Community-Risks-and-Counterpoints.md
+          - 设计哲学: agent-loop-systems/Agent-Loop-Systems-Claude-Science-Design-Philosophy.md
+          - 长文参考: agent-loop-systems/Claude-Science-Full-Reference-ZH.md
+      - 核心主题:
+          - 循环与执行框架（Loop / Harness）: agent-loop-systems/Agent-Loop-Systems-Loop-and-Harness-Architecture.md
+          - 人工介入与护栏（HITL / Guardrails）: agent-loop-systems/Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails.md
+          - 验证、评估与可观测性（Verification / Evals）: agent-loop-systems/Agent-Loop-Systems-Verification-Evals-and-Observability.md
+          - 记忆、学习与 Wiki: agent-loop-systems/Agent-Loop-Systems-Memory-Learning-and-Wiki.md
+          - 风险与反方观点: agent-loop-systems/Agent-Loop-Systems-Community-Risks-and-Counterpoints.md
+  - 站点维护:
+      - 中文化维护模块: site-maintenance/translation-module.md

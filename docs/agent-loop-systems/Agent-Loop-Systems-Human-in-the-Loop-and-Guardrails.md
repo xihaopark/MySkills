@@ -1,87 +1,86 @@
-# Notes 02: Human-in-the-Loop and Guardrails
+# 笔记 02：人工介入与护栏（HITL / Guardrails）
 
-## Core Pattern
+## 核心模式
 
-Strong sources agree that HITL should be implemented as a durable interrupt, not as a prompt instruction like "ask the user if needed."
+高质量资料都认为：人工介入（human-in-the-loop, HITL）应实现为可持久化的中断（durable interrupt），而不是一句 prompt 指令“需要时询问用户”。
 
-Key mechanics:
+关键机制：
 
-- pause execution at a specific point;
-- persist state;
-- surface a small structured payload to the human;
-- accept a typed decision such as approve/edit/reject/respond;
-- resume from the same run/thread state;
-- record the decision and option text.
+- 在明确位置暂停执行。
+- 持久化当前状态。
+- 向人展示小而结构化的 payload。
+- 接收类型化决策，例如 approve / edit / reject / respond。
+- 从同一个 run / thread state 恢复。
+- 记录决策、选项文本和用户选择。
 
-## Guardrail Taxonomy
+## 护栏分类
 
-OpenAI's division maps well to Scientific workflow agent:
+OpenAI 的分类可以很好地映射到科研 workflow agent：
 
-- Input guardrails: block or reroute unsuitable initial requests.
-- Tool guardrails: validate tool inputs/outputs around side effects.
-- Output guardrails: validate what leaves the system.
-- Human review: pause before sensitive or consequential actions.
+- 输入护栏（input guardrails）：拦截或重路由不合适的初始请求。
+- 工具护栏（tool guardrails）：围绕副作用校验工具输入/输出。
+- 输出护栏（output guardrails）：校验系统最终给出的内容。
+- 人工 review（human review）：在敏感或有后果的动作前暂停。
 
-Reusable mapping:
+可复用映射：
 
-- Core gates are not "notices"; they are human review interrupts.
-- Audit notices can remain context-only, but must not masquerade as a gate.
-- Core3-6 decisions that affect interpretation should use typed popup gates.
+- Core gates 不是 notice，而是 human review interrupt。
+- Audit notices 可以保持 context-only，但不能伪装成 gate。
+- Core3-6 中会影响解释的决策，应使用 typed popup gate。
 
-## What Should Become a Gate?
+## 哪些内容应该成为 Gate？
 
-Gate candidates from ER workflow:
+ER workflow 中的 gate 候选：
 
-- Core3:
-  - exposure metric definitions;
-  - posthoc/source mapping;
-  - BLQ/LLOQ handling;
-  - exposure windows;
-  - observed vs modeled provenance.
-- Core4:
-  - ER question matrix;
-  - endpoint family and exposure axis list;
-  - plot batch approval;
-  - model-readiness route.
-- Core5:
-  - model family;
-  - minimum event threshold;
-  - dose adjustment;
-  - censoring/TTE rules;
-  - interpretation level.
-- Core6:
-  - readiness status;
-  - must-resolve actions;
-  - whether selected results enter downstream context.
-- Wiki:
-  - approve/reject/edit learning candidates before entering reviewed wiki.
+- Core3：
+  - exposure metric definitions；
+  - posthoc/source mapping；
+  - BLQ/LLOQ 处理策略；
+  - exposure windows；
+  - observed vs modeled provenance。
+- Core4：
+  - ER question matrix；
+  - endpoint family 和 exposure axis list；
+  - plot batch approval；
+  - model-readiness route。
+- Core5：
+  - model family；
+  - minimum event threshold；
+  - dose adjustment；
+  - censoring / TTE rules；
+  - interpretation level。
+- Core6：
+  - readiness status；
+  - must-resolve actions；
+  - selected results 是否进入后续上下文。
+- Wiki：
+  - 学习候选进入 reviewed wiki 前，需要 approve / reject / edit。
 
-## Interface Shape
+## 界面形态
 
-The best HITL payload is not a full transcript. It should include:
+最好的 HITL payload 不是完整 transcript，而应包含：
 
-- decision title;
-- why the decision matters;
-- current evidence;
-- options with exact option text;
-- recommended option, if safe;
-- impact on downstream cores;
-- links to source artifacts;
-- free-form comment slot;
-- resume behavior.
+- decision title；
+- 为什么这个决策重要；
+- 当前证据；
+- 选项及精确 option text；
+- 在安全时给出 recommended option；
+- 对下游 core 的影响；
+- 指向 source artifacts 的链接；
+- free-form comment；
+- resume behavior。
 
-## Failure Modes to Avoid
+## 需要避免的失败模式
 
-- Asking for approval after the side effect already happened.
-- Losing state while waiting for user input.
-- Hiding the exact option text that was chosen.
-- Putting huge raw CSV/debug logs in the user-facing gate.
-- Treating "user did not answer" as implicit approval for clinical/statistical interpretation.
-- Reusing a gate decision across runs without a run-scoped record.
+- 副作用已经发生后才请求 approval。
+- 等待用户输入时丢失状态。
+- 不记录用户选择的精确 option text。
+- 把巨大 raw CSV / debug log 放进用户 gate。
+- 在临床/统计解释中把“用户未回答”当作 implicit approval。
+- 在没有 run-scoped record 的情况下跨 run 复用 gate decision。
 
-## Open Design Questions
+## 开放问题
 
-- Should Core3-6 gates use the same typed schema family as Core1 data cutoff?
-- Should each gate write both `gate_request.json` and `gate_decision.jsonl`?
-- Should UI allow "approve for this run only" vs "approve and propose wiki memory"?
-
+- Core3-6 gates 是否应使用 Core1 data cutoff 同一类 typed schema？
+- 每个 gate 是否都写 `gate_request.json` 和 `gate_decision.jsonl`？
+- UI 是否需要区分 “approve for this run only” 和 “approve and propose wiki memory”？

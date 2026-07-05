@@ -1,158 +1,157 @@
-# Notes 06: Claude Science Design Philosophy
+# 笔记 06：Claude Science 设计哲学
 
-Source: `../sources/claude-science-design-philosophy-zh.md`
+来源：`Claude-Science-Full-Reference-ZH.md`
 
-This note distills the user-added Claude Science reading into design principles for scientific workflow agent. It does not claim Claude Science is the target product; it uses the reading as a reference architecture for scientific-agent behavior.
+这篇笔记把用户补充的 Claude Science 长文阅读提炼成科研 workflow agent 的设计原则。它并不把 Claude Science 当成目标产品，而是把它作为科学 agent 行为的参考架构（reference architecture）。
 
-## Core Frame
+## 核心框架
 
-The useful sentence from the source:
+原文中最有价值的一句话是：
 
-> Treat the agent as a scientific instrument that must be calibrated, not as a subordinate that must be commanded.
+> 把 agent 当成一个需要被“校准”的科学仪器，而不是一个需要被“命令”的下属。
 
-For a scientific workflow agent, this means we should not solve Core3-6 by adding stricter prompt commands. We should calibrate the loop:
+对科研 workflow agent 来说，这意味着 Core3-6 不能靠更严格的 prompt 命令来解决。我们要校准的是整个 loop：
 
-- what evidence the agent sees;
-- what artifacts it must produce;
-- what boundaries it cannot cross;
-- what user decisions are required;
-- what evals show the loop is improving.
+- agent 能看到什么证据；
+- 它必须产出什么 artifacts；
+- 它不能跨越哪些边界；
+- 哪些用户决策是必需的；
+- 哪些 evals 能证明循环在变好。
 
-## Seven Transferable Principles
+## 七条可迁移原则
 
 ### 1. Artifact-First
 
-Claude Science treats artifacts as the main product and chat as the connective layer.
+Claude Science 把 artifacts 当成主要产品，chat 只是连接层。
 
-Reusable mapping:
+可复用映射：
 
-- `<run evidence root>` should remain the evidence root.
-- Core3-6 should produce user-facing attention packets that link to artifacts.
-- Main conversation should summarize and navigate artifacts, not become the artifact.
+- `<run evidence root>` 应继续作为 evidence root。
+- Core3-6 应产出用户可读的 attention packets，并链接到 artifacts。
+- Main conversation 应总结和导航 artifacts，而不是自己成为 artifact。
 
-Design implication:
+设计含义：
 
-- Every Core3-6 card should point to concrete CSV/PNG/manifest/review files.
-- "Selected result" should be an artifact-backed context object, not copied chat text.
+- 每张 Core3-6 card 都应指向具体 CSV / PNG / manifest / review files。
+- “Selected result” 应是 artifact-backed context object，而不是复制出来的聊天文本。
 
-### 2. Declarative Compute / Declarative Workflow
+### 2. 声明式计算 / 声明式工作流（Declarative Compute / Workflow）
 
-Claude Science uses declarative environment specs to separate what a job needs from how each backend runs it.
+Claude Science 使用声明式环境规格，把 job 需要什么与各后端如何运行分离。
 
-Reusable mapping:
+可复用映射：
 
-- ER workflow specs should describe clinical/statistical intent and source mappings.
-- Runner code should execute against those specs without hardcoded study logic.
-- Core3-6 gates should mutate explicit spec/decision state, not hidden prompt context.
+- ER workflow specs 应描述临床/统计意图和 source mappings。
+- Runner code 应依据 specs 执行，而不是写死 study logic。
+- Core3-6 gates 应修改显式 spec / decision state，而不是隐藏 prompt context。
 
-Design implication:
+设计含义：
 
-- Gate decisions should be represented as typed state that downstream runners consume.
-- Future Core3-6 improvements should prefer spec extensions over ad hoc prompts.
+- Gate decisions 应成为下游 runner 会消费的 typed state。
+- 未来 Core3-6 改进应优先扩展 specs，而不是添加 ad hoc prompts。
 
 ### 3. Provenance by Construction
 
-The source emphasizes execution logs, artifact versions, dependency DAGs, checksums, and environment snapshots.
+原文强调 execution logs、artifact versions、dependency DAGs、checksums 和 environment snapshots。
 
-Reusable mapping:
+可复用映射：
 
-- We already have artifact lanes, pipeline status, data auditor, gate records, and `run evidence roots`.
-- The gap is user-facing provenance: the user should see enough lineage to trust what happened without reading raw debug.
+- 我们已经有 artifact lanes、pipeline status、data auditor、gate records 和 `run evidence roots`。
+- 当前缺口是用户可见 provenance：用户应能在不读 raw debug 的情况下理解 lineage。
 
-Design implication:
+设计含义：
 
-- Core3-6 should add compact lineage summaries:
-  - source files used;
-  - upstream artifacts consumed;
-  - outputs written;
-  - gates/audits affecting result;
-  - unresolved dependencies.
+- Core3-6 应增加紧凑 lineage summaries：
+  - 使用了哪些 source files；
+  - 消费了哪些 upstream artifacts；
+  - 写出了哪些 outputs；
+  - 哪些 gates / audits 影响了结果；
+  - 仍有哪些 unresolved dependencies。
 
 ### 4. Grounding Over Generation
 
-Claude Science's rule is compute/query authoritative sources rather than inventing answers.
+Claude Science 的原则是查询/计算权威来源，而不是从模型记忆中编答案。
 
-Reusable mapping:
+可复用映射：
 
-- Core3-6 cannot infer clinical/statistical decisions from model memory.
-- It should use source data, specs, prior artifacts, reviewed wiki, and explicit gates.
+- Core3-6 不能从模型记忆推断临床/统计决策。
+- 它应使用 source data、specs、prior artifacts、reviewed wiki 和 explicit gates。
 
-Design implication:
+设计含义：
 
-- A Core3 exposure metric or Core5 interpretation must cite the exact spec/gate/source artifact that supports it.
-- If a source is unavailable, write a blocked manifest rather than creating synthetic placeholder claims.
+- Core3 exposure metric 或 Core5 interpretation 必须引用支持它的 spec / gate / source artifact。
+- 如果 source 不可用，应写 blocked manifest，而不是生成 synthetic placeholder claims。
 
 ### 5. Purpose-Shaped Agents
 
-The source highlights agents shaped by removing irrelevant tools and capabilities.
+原文强调通过移除无关工具和能力来塑造 agent。
 
-Reusable mapping:
+可复用映射：
 
-- Do not make one all-powerful ER agent.
-- Use purpose-shaped roles:
-  - Runner: execute deterministic core.
-  - Auditor: inspect artifact/source/gate quality.
-  - Explainer: produce human decision packet.
-  - Wiki Curator: propose learning candidates, never auto-approve.
+- 不要做一个全能 ER agent。
+- 使用 purpose-shaped roles：
+  - Runner：执行确定性 core。
+  - Auditor：检查 artifact / source / gate quality。
+  - Explainer：生成 human decision packet。
+  - Wiki Curator：提出 learning candidates，但永不自动 approve。
 
-Design implication:
+设计含义：
 
-- Core3-6 should not use group chat as the default.
-- Review/audit roles should have constrained authority and clear output schemas.
+- Core3-6 不应默认使用 group chat。
+- Review / audit roles 应有受限权限和清晰 output schemas。
 
 ### 6. Progressive Disclosure
 
-Claude Science keeps many skills available without loading them all into context.
+Claude Science 让许多 skills 可用，但不会一次性把它们全部塞进上下文。
 
-Reusable mapping:
+可复用映射：
 
-- Reviewed wiki should be retrieved selectively into a bounded attention packet.
-- Skills should stay stable procedure; wiki should provide reviewed project knowledge.
+- Reviewed wiki 应选择性检索成有边界的 attention packet。
+- Skills 保存稳定 procedure；Wiki 提供 reviewed project knowledge。
 
-Design implication:
+设计含义：
 
-- Wiki retrieval logs should show why a page was retrieved.
-- The agent should only receive distilled wiki context needed for the current core.
+- Wiki retrieval logs 应说明为什么检索某页。
+- Agent 只应接收当前 core 所需的 distilled wiki context。
 
 ### 7. Measured Self-Extension
 
-The source's strongest self-evolution lesson is not "auto-write new skills." It is measured improvement:
+原文关于自进化最强的教训不是“自动写新 skills”，而是可测量的改进：
 
-- generate candidate;
-- test it;
-- compare results;
-- review regression risk;
-- only then publish.
+- 生成候选；
+- 测试它；
+- 对比结果；
+- review regression risk；
+- 然后才发布。
 
-Reusable mapping:
+可复用映射：
 
-- Runtime can write learning candidates.
-- Humans approve wiki updates.
-- Skills/registry/runner updates require explicit development workflow and tests.
+- Runtime 可以写 learning candidates。
+- 人类批准 wiki updates。
+- Skills / registry / runner updates 需要显式开发流程和测试。
 
-Design implication:
+设计含义：
 
-- Wiki learning and eval learning should be separate:
-  - wiki records reviewed knowledge;
-  - eval cases record behavior we must preserve.
-- A learning candidate should be promoted only with source refs and review status.
+- Wiki learning 与 eval learning 应分开：
+  - Wiki 记录 reviewed knowledge；
+  - Eval cases 记录必须保持的行为。
+- Learning candidate 只有带 source refs 和 review status 才能提升。
 
-## Tension With Current A scientific workflow agent State
+## 与当前状态的张力
 
-Current Core3-6 happy path is mostly automode. The Claude Science reading pushes us toward:
+当前 Core3-6 happy path 仍偏 automode。Claude Science 阅读推动我们走向：
 
-- less silent automation;
-- more artifact-backed user visibility;
-- clearer decision boundaries;
-- stronger provenance summaries;
-- reviewed memory that affects execution;
-- eval-backed self-evolution rather than unchecked runtime learning.
+- 更少静默自动化；
+- 更多 artifact-backed user visibility；
+- 更清晰的 decision boundaries；
+- 更强的 provenance summaries；
+- 真正影响执行的 reviewed memory；
+- 由 eval 支撑的 self-evolution，而不是 runtime unchecked learning。
 
-## Design Questions Added by This Source
+## 由此产生的设计问题
 
-- Should every Core3-6 output be wrapped as an artifact card with provenance and decision boundary?
-- Should Core3-6 runner output include a dependency DAG or simplified lineage table?
-- Should wiki retrieval be treated as a formal source input and appear in Core6 review package?
-- Should "agent learning" always produce two artifacts: a wiki candidate and an eval candidate?
-- Should each role's allowed tools be documented as part of the 1.0 stability plan?
-
+- 每个 Core3-6 输出是否都应包装为带 provenance 和 decision boundary 的 artifact card？
+- Core3-6 runner 输出是否应包含 dependency DAG 或简化 lineage table？
+- Wiki retrieval 是否应作为正式 source input 出现在 Core6 review package？
+- “Agent learning” 是否总是产出两个 artifacts：wiki candidate 和 eval candidate？
+- 每个 role 的 allowed tools 是否应作为 1.0 稳定性计划的一部分记录？
