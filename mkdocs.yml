@@ -8,6 +8,9 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   language: en
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   features:
     - navigation.tabs
     - navigation.sections
@@ -20,14 +23,14 @@ theme:
     - content.code.copy
   palette:
     - scheme: default
-      primary: indigo
-      accent: teal
+      primary: black
+      accent: deep orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
-      accent: teal
+      primary: black
+      accent: deep orange
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
