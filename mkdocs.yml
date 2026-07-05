@@ -1,0 +1,70 @@
+site_name: MySkills Knowledge Base
+site_description: Personal knowledge base for reusable agent-system design, workflow skills, and collaboration patterns.
+site_url: https://xihaopark.github.io/MySkills/
+repo_url: https://github.com/xihaopark/MySkills
+repo_name: xihaopark/MySkills
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.action.edit
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Agent Loop Systems:
+      - Overview: agent-loop-systems/index.md
+      - Source Index: agent-loop-systems/Agent-Loop-Systems-Source-Index.md
+      - Scientific Workflow Design Questions: agent-loop-systems/Scientific-Workflow-Agent-Design-Questions.md
+      - Claude Science:
+          - Design Philosophy: agent-loop-systems/Agent-Loop-Systems-Claude-Science-Design-Philosophy.md
+          - Full Reference ZH: agent-loop-systems/Claude-Science-Full-Reference-ZH.md
+      - Foundations:
+          - Loop and Harness Architecture: agent-loop-systems/Agent-Loop-Systems-Loop-and-Harness-Architecture.md
+          - Human-in-the-Loop and Guardrails: agent-loop-systems/Agent-Loop-Systems-Human-in-the-Loop-and-Guardrails.md
+          - Verification, Evals, and Observability: agent-loop-systems/Agent-Loop-Systems-Verification-Evals-and-Observability.md
+          - Memory, Learning, and Wiki: agent-loop-systems/Agent-Loop-Systems-Memory-Learning-and-Wiki.md
+          - Community Risks and Counterpoints: agent-loop-systems/Agent-Loop-Systems-Community-Risks-and-Counterpoints.md

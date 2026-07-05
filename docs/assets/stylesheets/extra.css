@@ -1,0 +1,33 @@
+:root {
+  --md-primary-fg-color: #2f4f7f;
+  --md-accent-fg-color: #00897b;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 720;
+}
+
+.md-typeset .grid.cards > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.8rem;
+  padding: 0;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.85rem;
+}
+
+.md-typeset .grid.cards strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.md-typeset .admonition {
+  border-radius: 0.35rem;
+}

@@ -760,9 +760,9 @@ all outside the app.
 
 Inside a document artifact (a `.tex`, `.md`, or `.html` file you
 `save_artifacts`), never write an image path as a bare filename —
-`\includegraphics{figure.png}` or `![plot](figure.png)` breaks when two
+`\includegraphics{figure.png}` or a Markdown image that points to `figure.png` breaks when two
 artifacts share a name.
-「breaks when two artifacts share a name」——两个同名产物时裸文件名会失效。 这是一个真实的、会咬人的 bug 场景：一个会话里存了两张都叫 figure.png 的图，![plot](figure.png) 到底指哪张？系统无法确定。而 {{artifact:art_ARTIFACT_ID}}（用 save_artifacts 返回的 artifact_id 加 art_ 前缀）唯一锚定一个产物，并且自动追踪该产物的最新版本。
+「breaks when two artifacts share a name」——两个同名产物时裸文件名会失效。 这是一个真实的、会咬人的 bug 场景：一个会话里存了两张都叫 figure.png 的图，指向 figure.png 的 Markdown 图片到底指哪张？系统无法确定。而 {{artifact:art_ARTIFACT_ID}}（用 save_artifacts 返回的 artifact_id 加 art_ 前缀）唯一锚定一个产物，并且自动追踪该产物的最新版本。
 
 这里体现了一个深层设计：产物有身份（artifact_id）、有版本（version_id），引用系统建立在身份而非名字之上。 名字会碰撞、会重复，id 不会。这和数据库设计里「用主键而非业务字段做外键」是同一个道理。
 

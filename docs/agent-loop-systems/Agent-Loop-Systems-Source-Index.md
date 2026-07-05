@@ -8,7 +8,7 @@ Scope: English-language external sources on agent loops, harness design, HITL, g
 
 ### Local Reference - Claude Science Design Philosophy Reading
 
-- URL: local file `sources/claude-science-design-philosophy-zh.md`
+- URL: [Claude Science Full Reference ZH](Claude-Science-Full-Reference-ZH.md)
 - Category: scientific-agent system design, artifact-first research agent architecture
 - Why it matters: long-form Chinese analysis of Claude Science as a scientific-computing agent platform. It is especially relevant to A scientific workflow agent because it frames agents as calibrated scientific instruments whose outputs are artifacts, provenance records, and grounded computations rather than chat answers.
 - Key takeaways:
