@@ -25,7 +25,7 @@ project-independent operating preferences.
 
 | Label | Name | Public email | Evidence | Use |
 | --- | --- | --- | --- | --- |
-| `WHXisWH` | 未公开 | 未公开 | Frequent collaborator named by the user; GitHub collaborator on `xihaopark/AZ`; pending `write` invitation on `xihaopark/AZ_dev` as of 2026-06-30. | Use when adding or checking collaborator access for private development repos, especially shared project-development material repos. |
+| `WHXisWH` | Hongxi Wang | whx12110405@gmail.com | Frequent collaborator named by the user; GitHub collaborator on `xihaopark/AZ`; pending `write` invitation on `xihaopark/AZ_dev` as of 2026-06-30. | Use when adding or checking collaborator access for private development repos, especially shared project-development material repos. |
 
 ## GitHub Collaborator Candidates
 
