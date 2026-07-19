@@ -17,6 +17,7 @@ asks where persistent personal skill instructions should live, use this repo.
 ## Current Skills
 
 - `bio-analysis-pipeline/`
+- `build-editable-html-decks/`
 - `goal-driven-skill-iteration/`
 - `human-readable-project-reporting/`
 - `personal-collaboration-context/`

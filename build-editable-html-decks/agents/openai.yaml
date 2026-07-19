@@ -1,0 +1,4 @@
+interface:
+  display_name: "Editable HTML Slide Decks"
+  short_description: "Build polished editable HTML presentation decks"
+  default_prompt: "Use $build-editable-html-decks to create a polished single-file HTML slide deck with inline editing and PNG export."
